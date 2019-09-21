@@ -4,8 +4,6 @@ const add = ({a, b}, c) => {
     return a + b + c;
 }
 
-console.log(add({ a:1, b:12}, 100))
-
 const incrementCount = ({ incrementedBy = 1 } = {}) => ({
         type: 'INCREMENT',
         incrementedBy
@@ -53,16 +51,6 @@ const countReducer = (state = { count: 0 }, action) => {
 
 const store = createStore(countReducer);
 
-const unsubscribe = store.subscribe(() => {
-    console.log(store.getState());
-});
-
-
-// store.dispatch({
-//     type: 'INCREMENT',
-//     incrementedBy: 5
-// });
-
 store.dispatch(incrementCount({ incrementedBy: 5 }))
 
 store.dispatch(incrementCount());
@@ -74,21 +62,3 @@ store.dispatch(decrementCount({ decrementedBy: 10 }))
 store.dispatch(setCount());
 
 store.dispatch(resetCount());
-
-// store.dispatch({
-//     type: 'INCREMENT'
-// });
-
-// store.dispatch({
-//     type: 'RESET'
-// });
-
-// store.dispatch({
-//     type: 'DECREMENT',
-//     decrementedBy: 10
-// });
-
-// store .dispatch({
-//     type: 'SET',
-//     count: 101
-// })

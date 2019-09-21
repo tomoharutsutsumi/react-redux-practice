@@ -8,7 +8,6 @@ export default (state = expensesReducerDefaultState, action) => {
                 action.expense
             ];
         case 'REMOVE_EXPENSE':
-                console.log(action.id),
                 [
                     ...state
                 ].map((s) => {console.log(s.id)})

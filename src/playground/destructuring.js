@@ -1,24 +1,5 @@
 import { maxHeaderSize } from "http";
 
-
-// const person = {
-//     name: "tomo",
-//     age: 27,
-//     location: {
-//         city: 'tyokyo',
-//         temp: 32 
-//     }
-// };
-
-// const { name: firstName = "anony", age } = person;
-
-// console.log(`${firstName} is ${age}`)
-
-// const {city, temp: temperture} = person.location;
-// if (city && temperture) {
-//     console.log(`its ${temperture} in ${city}`)
-// }
-
 const book = {
     title: 'EGO is the enemy',
     author: 'ryan holiday',
